@@ -14,7 +14,7 @@ func Int32T() Type {
 	return Type{
 		id:    INT32T,
 		size:  32,
-		flags: 7,
+		flags: (1 << flagIsFixedSize) | (1 << flagIsNumericPrim) | (1 << flagIsNumericType),
 	}
 }
 
@@ -23,7 +23,7 @@ func Int64T() Type {
 	return Type{
 		id:    INT64T,
 		size:  64,
-		flags: 7,
+		flags: (1 << flagIsFixedSize) | (1 << flagIsNumericPrim) | (1 << flagIsNumericType),
 	}
 }
 
@@ -32,7 +32,7 @@ func Float32T() Type {
 	return Type{
 		id:    FLOAT32T,
 		size:  32,
-		flags: 7,
+		flags: (1 << flagIsFixedSize) | (1 << flagIsNumericPrim) | (1 << flagIsNumericType),
 	}
 }
 
@@ -41,7 +41,7 @@ func Float64T() Type {
 	return Type{
 		id:    FLOAT64T,
 		size:  64,
-		flags: 7,
+		flags: (1 << flagIsFixedSize) | (1 << flagIsNumericPrim) | (1 << flagIsNumericType),
 	}
 }
 
@@ -50,7 +50,7 @@ func DateT() Type {
 	return Type{
 		id:    DATET,
 		size:  32,
-		flags: 3,
+		flags: (1 << flagIsFixedSize) | (1 << flagIsNumericPrim) | (1 << flagIsTimeType),
 	}
 }
 
@@ -59,7 +59,7 @@ func TimestampTZT() Type {
 	return Type{
 		id:    TIMESTAMPTZT,
 		size:  64,
-		flags: 3,
+		flags: (1 << flagIsFixedSize) | (1 << flagIsNumericPrim) | (1 << flagIsTimeType),
 	}
 }
 
@@ -77,6 +77,6 @@ func BoolT() Type {
 	return Type{
 		id:    STRT,
 		size:  1,
-		flags: 1,
+		flags: (1 << flagIsFixedSize),
 	}
 }
