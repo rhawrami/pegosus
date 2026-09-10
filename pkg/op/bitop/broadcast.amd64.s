@@ -40,8 +40,8 @@ tradLoop:                                                  \
 exitFn:                                                    \
     RET
 
-// func broadcastB(dst []byte, lit byte)
-TEXT ·broadcastB(SB),NOSPLIT,$0-25
+// func broadcastU8(dst []byte, lit byte)
+TEXT ·broadcastU8(SB),NOSPLIT,$0-25
     vBCast(R9, VPBROADCASTB, VMOVDQU, MOVB, $1, $128)
 
 // func broadcastI64(dst []int64, lit int64)

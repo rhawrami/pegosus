@@ -3,10 +3,10 @@
 package bitop
 
 //go:noescape
-func bitWiseANDRetPopCount(src1, src2, dst []byte) uint64
+func bitWiseAndWithPopCount(src1, src2, dst []byte) uint64
 
 //go:noescape
-func bitWiseORRetPopCount(src1, src2, dst []byte) uint64
+func bitWiseOrWithPopCount(src1, src2, dst []byte) uint64
 
 //go:noescape
 func bitWiseXorWithPopCount(src1, src2, dst []byte) uint64
@@ -15,4 +15,4 @@ func bitWiseXorWithPopCount(src1, src2, dst []byte) uint64
 func bitWiseAndNWithPopCount(src1, src2, dst []byte) uint64
 
 //go:noescape
-func bitWisePopCount(src []byte) uint64
+func popCount(src []byte) uint64

@@ -70,52 +70,52 @@ exitFn:                                                    \
 #define LEF32 VCMPPS $2, Y0, Y1, Y2
 #define NEQF32 VCMPPS $4, Y0, Y1, Y2
 
-// func cmpGtI32Lit(src []int32, dst []byte, lit int32)
-TEXT ·cmpGtI32Lit(SB),NOSPLIT,$0-52
+// func gtI32(src []int32, dst []byte, lit int32)
+TEXT ·gtI32(SB),NOSPLIT,$0-52
     vCmpOneLit(VPBROADCASTD, VMOVDQU, GTI32)
 
-// func cmpLtI32Lit(src []int32, dst []byte, lit int32)
-TEXT ·cmpLtI32Lit(SB),NOSPLIT,$0-52
+// func ltI32(src []int32, dst []byte, lit int32)
+TEXT ·ltI32(SB),NOSPLIT,$0-52
     vCmpOneLit(VPBROADCASTD, VMOVDQU, LTI32)
 
-// func cmpGeI32Lit(src []int32, dst []byte, lit int32)
-TEXT ·cmpGeI32Lit(SB),NOSPLIT,$0-52
+// func geI32(src []int32, dst []byte, lit int32)
+TEXT ·geI32(SB),NOSPLIT,$0-52
     vCmpOneLit(VPBROADCASTD, VMOVDQU, GEI32)
 
-// func cmpLeI32Lit(src []int32, dst []byte, lit int32)
-TEXT ·cmpLeI32Lit(SB),NOSPLIT,$0-52
+// func leI32(src []int32, dst []byte, lit int32)
+TEXT ·leI32(SB),NOSPLIT,$0-52
     vCmpOneLit(VPBROADCASTD, VMOVDQU, LEI32)
 
-// func cmpEqI32Lit(src []int32, dst []byte, lit int32)
-TEXT ·cmpEqI32Lit(SB),NOSPLIT,$0-52
+// func eqI32(src []int32, dst []byte, lit int32)
+TEXT ·eqI32(SB),NOSPLIT,$0-52
     vCmpOneLit(VPBROADCASTD, VMOVDQU, EQI32)
 
-// func cmpNeqI32Lit(src []int32, dst []byte, lit int32)
-TEXT ·cmpNeqI32Lit(SB),NOSPLIT,$0-52
+// func neqI32(src []int32, dst []byte, lit int32)
+TEXT ·neqI32(SB),NOSPLIT,$0-52
     vCmpOneLit(VPBROADCASTD, VMOVDQU, NEQI32)
 
-// func cmpGtF32Lit(src []float32, dst []byte, lit float32)
-TEXT ·cmpGtF32Lit(SB),NOSPLIT,$0-52
+// func gtF32(src []float32, dst []byte, lit float32)
+TEXT ·gtF32(SB),NOSPLIT,$0-52
     vCmpOneLit(VBROADCASTSS, VMOVUPS, GTF32)
 
-// func cmpLtF32Lit(src []float32, dst []byte, lit float32)
-TEXT ·cmpLtF32Lit(SB),NOSPLIT,$0-52
+// func ltF32(src []float32, dst []byte, lit float32)
+TEXT ·ltF32(SB),NOSPLIT,$0-52
     vCmpOneLit(VBROADCASTSS, VMOVUPS, LTF32)
 
-// func cmpGeF32Lit(src []float32, dst []byte, lit float32)
-TEXT ·cmpGeF32Lit(SB),NOSPLIT,$0-52
+// func geF32(src []float32, dst []byte, lit float32)
+TEXT ·geF32(SB),NOSPLIT,$0-52
     vCmpOneLit(VBROADCASTSS, VMOVUPS, GEF32)
 
-// func cmpLeF32Lit(src []float32, dst []byte, lit float32)
-TEXT ·cmpLeF32Lit(SB),NOSPLIT,$0-52
+// func leF32(src []float32, dst []byte, lit float32)
+TEXT ·leF32(SB),NOSPLIT,$0-52
     vCmpOneLit(VBROADCASTSS, VMOVUPS, LEF32)
 
-// func cmpEqF32Lit(src []float32, dst []byte, lit float32)
-TEXT ·cmpEqF32Lit(SB),NOSPLIT,$0-52
+// func eqF32(src []float32, dst []byte, lit float32)
+TEXT ·eqF32(SB),NOSPLIT,$0-52
     vCmpOneLit(VBROADCASTSS, VMOVUPS, EQF32)
     
-// func cmpNeqF32Lit(src []float32, dst []byte, lit float32)
-TEXT ·cmpNeqF32Lit(SB),NOSPLIT,$0-52
+// func neqF32(src []float32, dst []byte, lit float32)
+TEXT ·neqF32(SB),NOSPLIT,$0-52
     vCmpOneLit(VBROADCASTSS, VMOVUPS, NEQF32)
 
 #define vCmpTwoLit(vBrdCstOp, vMovOp, vCmpOp)              \
@@ -186,18 +186,18 @@ exitFn:                                                    \
         VCMPPS $1, Y2, Y1, Y5 \
         VPOR Y4, Y5, Y3
 
-// func cmpBetI32Lit(src []int32, dst []byte, min int32, max int32)
-TEXT ·cmpBetI32Lit(SB),NOSPLIT,$0-56
+// func betI32(src []int32, dst []byte, min int32, max int32)
+TEXT ·betI32(SB),NOSPLIT,$0-56
     vCmpTwoLit(VPBROADCASTD, VMOVDQU, BETI32)
 
-// func cmpNBetI32Lit(src []int32, dst []byte, min int32, max int32)
-TEXT ·cmpNBetI32Lit(SB),NOSPLIT,$0-56
+// func nBetI32(src []int32, dst []byte, min int32, max int32)
+TEXT ·nBetI32(SB),NOSPLIT,$0-56
     vCmpTwoLit(VPBROADCASTD, VMOVDQU, NBETI32)
 
-// func cmpBetF32Lit(src []float32, dst []byte, min float32, max float32)
-TEXT ·cmpBetF32Lit(SB),NOSPLIT,$0-56
+// func betF32(src []float32, dst []byte, min float32, max float32)
+TEXT ·betF32(SB),NOSPLIT,$0-56
     vCmpTwoLit(VBROADCASTSS, VMOVUPS, BETF32)
 
-// func cmpNBetF32Lit(src []float32, dst []byte, min float32, max float32)
-TEXT ·cmpNBetF32Lit(SB),NOSPLIT,$0-56
+// func nBetF32(src []float32, dst []byte, min float32, max float32)
+TEXT ·nBetF32(SB),NOSPLIT,$0-56
     vCmpTwoLit(VBROADCASTSS, VMOVUPS, NBETF32)

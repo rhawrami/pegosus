@@ -27,16 +27,16 @@ func maxF32(src, dst []float32)
 func minF32(src, dst []float32)
 
 //go:noescape
-func minmaxI64(src, dst []int64)
+func minMaxI64(src, dst []int64)
 
 //go:noescape
-func minmaxI32(src, dst []int32)
+func minMaxI32(src, dst []int32)
 
 //go:noescape
-func minmaxF64(src, dst []float64)
+func minMaxF64(src, dst []float64)
 
 //go:noescape
-func minmaxF32(src, dst []float32)
+func minMaxF32(src, dst []float32)
 
 //go:noescape
 func maxI64WithValidity(src, dst []int64, validity []byte)
@@ -63,13 +63,13 @@ func maxF32WithValidity(src, dst []float32, validity []byte)
 func minF32WithValidity(src, dst []float32, validity []byte)
 
 //go:noescape
-func minmaxI64WithValidity(src, dst []int64, validity []byte)
+func minMaxI64WithValidity(src, dst []int64, validity []byte)
 
 //go:noescape
-func minmaxI32WithValidity(src, dst []int32, validity []byte)
+func minMaxI32WithValidity(src, dst []int32, validity []byte)
 
 //go:noescape
-func minmaxF64WithValidity(src, dst []float64, validity []byte)
+func minMaxF64WithValidity(src, dst []float64, validity []byte)
 
 //go:noescape
-func minmaxF32WithValidity(src, dst []float32, validity []byte)
+func minMaxF32WithValidity(src, dst []float32, validity []byte)

@@ -3,49 +3,49 @@
 package cmpop
 
 //go:noescape
-func cmpGtI32Lit(src []int32, dst []byte, lit int32)
+func gtI32(src []int32, dst []byte, lit int32)
 
 //go:noescape
-func cmpLtI32Lit(src []int32, dst []byte, lit int32)
+func ltI32(src []int32, dst []byte, lit int32)
 
 //go:noescape
-func cmpGeI32Lit(src []int32, dst []byte, lit int32)
+func geI32(src []int32, dst []byte, lit int32)
 
 //go:noescape
-func cmpLeI32Lit(src []int32, dst []byte, lit int32)
+func leI32(src []int32, dst []byte, lit int32)
 
 //go:noescape
-func cmpEqI32Lit(src []int32, dst []byte, lit int32)
+func eqI32(src []int32, dst []byte, lit int32)
 
 //go:noescape
-func cmpGtF32Lit(src []float32, dst []byte, lit float32)
+func gtF32(src []float32, dst []byte, lit float32)
 
 //go:noescape
-func cmpLtF32Lit(src []float32, dst []byte, lit float32)
+func ltF32(src []float32, dst []byte, lit float32)
 
 //go:noescape
-func cmpGeF32Lit(src []float32, dst []byte, lit float32)
+func geF32(src []float32, dst []byte, lit float32)
 
 //go:noescape
-func cmpLeF32Lit(src []float32, dst []byte, lit float32)
+func leF32(src []float32, dst []byte, lit float32)
 
 //go:noescape
-func cmpEqF32Lit(src []float32, dst []byte, lit float32)
+func eqF32(src []float32, dst []byte, lit float32)
 
 //go:noescape
-func cmpNeqI32Lit(src []int32, dst []byte, lit int32)
+func neqI32(src []int32, dst []byte, lit int32)
 
 //go:noescape
-func cmpNeqF32Lit(src []float32, dst []byte, lit float32)
+func neqF32(src []float32, dst []byte, lit float32)
 
 //go:noescape
-func cmpBetI32Lit(src []int32, dst []byte, min int32, max int32)
+func betI32(src []int32, dst []byte, min int32, max int32)
 
 //go:noescape
-func cmpNBetI32Lit(src []int32, dst []byte, min int32, max int32)
+func nBetI32(src []int32, dst []byte, min int32, max int32)
 
 //go:noescape
-func cmpBetF32Lit(src []float32, dst []byte, min float32, max float32)
+func betF32(src []float32, dst []byte, min float32, max float32)
 
 //go:noescape
-func cmpNBetF32Lit(src []float32, dst []byte, min float32, max float32)
+func nBetF32(src []float32, dst []byte, min float32, max float32)

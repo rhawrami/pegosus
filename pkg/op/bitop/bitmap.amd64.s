@@ -60,24 +60,24 @@ exitFn:                                                    \
     MOVQ R13, cnt+72(FP)                                   \
     RET
 
-// func bitWiseANDRetPopCount(src1, src2, dst []byte) uint64
-TEXT ·bitWiseANDRetPopCount(SB),NOSPLIT,$0-80
+// func bitWiseAndWithPopCount(src1, src2, dst []byte) uint64
+TEXT ·bitWiseAndWithPopCount(SB),NOSPLIT,$0-80
     combineAndReturnSum(ANDQ, ANDW)
 
-// func bitWiseORRetPopCount(src1, src2, dst []byte) uint64
-TEXT ·bitWiseORRetPopCount(SB),NOSPLIT,$0-80
+// func bitWiseOrWithPopCount(src1, src2, dst []byte) uint64
+TEXT ·bitWiseOrWithPopCount(SB),NOSPLIT,$0-80
     combineAndReturnSum(ORQ, ORW)
 
 // func bitWiseXorWithPopCount(src1, src2, dst []byte) uint64
-TEXT ·bitWiseORRetPopCount(SB),NOSPLIT,$0-80
+TEXT ·bitWiseXorWithPopCount(SB),NOSPLIT,$0-80
     combineAndReturnSum(XORQ, XORW)
 
 // func bitWiseAndNWithPopCount(src1, src2, dst []byte) uint64
 TEXT ·bitWiseAndNWithPopCount(SB),NOSPLIT,$0-80
     combineAndReturnSum(ANDNQ, ANDNW)
     
-// func bitWisePopCount(src []byte) uint64
-TEXT ·bitWisePopCount(SB),NOSPLIT,$0-32
+// func popCount(src []byte) uint64
+TEXT ·popCount(SB),NOSPLIT,$0-32
     MOVQ srcAddr+0(FP), AX
     MOVQ srcLen+8(FP), CX
     MOVQ CX, SI

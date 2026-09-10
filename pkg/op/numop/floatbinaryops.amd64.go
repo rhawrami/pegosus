@@ -27,25 +27,25 @@ func divF64Lit(src, dst []float64, lit float64)
 func divF32Lit(src, dst []float32, lit float32)
 
 //go:noescape
-func addF64VecF64Vec(src1, src2, dst []float64)
+func addF64Vec(src1, src2, dst []float64)
 
 //go:noescape
-func addF32VecF32Vec(src1, src2, dst []float32)
+func addF32Vec(src1, src2, dst []float32)
 
 //go:noescape
-func subF64VecF64Vec(src1, src2, dst []float64)
+func subF64Vec(src1, src2, dst []float64)
 
 //go:noescape
-func subF32VecF32Vec(src1, src2, dst []float32)
+func subF32Vec(src1, src2, dst []float32)
 
 //go:noescape
-func mulF64VecF64Vec(src1, src2, dst []float64)
+func mulF64Vec(src1, src2, dst []float64)
 
 //go:noescape
-func mulF32VecF32Vec(src1, src2, dst []float32)
+func mulF32Vec(src1, src2, dst []float32)
 
 //go:noescape
-func divF64VecF64Vec(src1, src2, dst []float64)
+func divF64Vec(src1, src2, dst []float64)
 
 //go:noescape
-func divF32VecF32Vec(src1, src2, dst []float32)
+func divF32Vec(src1, src2, dst []float32)

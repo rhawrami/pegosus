@@ -3,49 +3,49 @@
 package cmpop
 
 //go:noescape
-func cmpGtI64Lit(src []int64, dst []byte, lit int64)
+func gtI64(src []int64, dst []byte, lit int64)
 
 //go:noescape
-func cmpLtI64Lit(src []int64, dst []byte, lit int64)
+func ltI64(src []int64, dst []byte, lit int64)
 
 //go:noescape
-func cmpGeI64Lit(src []int64, dst []byte, lit int64)
+func geI64(src []int64, dst []byte, lit int64)
 
 //go:noescape
-func cmpLeI64Lit(src []int64, dst []byte, lit int64)
+func leI64(src []int64, dst []byte, lit int64)
 
 //go:noescape
-func cmpEqI64Lit(src []int64, dst []byte, lit int64)
+func eqI64(src []int64, dst []byte, lit int64)
 
 //go:noescape
-func cmpGtF64Lit(src []float64, dst []byte, lit float64)
+func gtF64(src []float64, dst []byte, lit float64)
 
 //go:noescape
-func cmpLtF64Lit(src []float64, dst []byte, lit float64)
+func ltF64(src []float64, dst []byte, lit float64)
 
 //go:noescape
-func cmpGeF64Lit(src []float64, dst []byte, lit float64)
+func geF64(src []float64, dst []byte, lit float64)
 
 //go:noescape
-func cmpLeF64Lit(src []float64, dst []byte, lit float64)
+func leF64(src []float64, dst []byte, lit float64)
 
 //go:noescape
-func cmpEqF64Lit(src []float64, dst []byte, lit float64)
+func eqF64(src []float64, dst []byte, lit float64)
 
 //go:noescape
-func cmpNeqI64Lit(src []int64, dst []byte, lit int64)
+func neqI64(src []int64, dst []byte, lit int64)
 
 //go:noescape
-func cmpNeqF64Lit(src []float64, dst []byte, lit float64)
+func neqF64(src []float64, dst []byte, lit float64)
 
 //go:noescape
-func cmpBetI64Lit(src []int64, dst []byte, min int64, max int64)
+func betI64(src []int64, dst []byte, min int64, max int64)
 
 //go:noescape
-func cmpNBetI64Lit(src []int64, dst []byte, min int64, max int64)
+func nBetI64(src []int64, dst []byte, min int64, max int64)
 
 //go:noescape
-func cmpBetF64Lit(src []float64, dst []byte, min float64, max float64)
+func betF64(src []float64, dst []byte, min float64, max float64)
 
 //go:noescape
-func cmpNBetF64Lit(src []float64, dst []byte, min float64, max float64)
+func nBetF64(src []float64, dst []byte, min float64, max float64)

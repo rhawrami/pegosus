@@ -3,7 +3,7 @@
 package bitop
 
 //go:noescape
-func broadcastB(dst []byte, lit byte)
+func broadcastU8(dst []byte, lit byte)
 
 //go:noescape
 func broadcastI64(dst []int64, lit int64)
